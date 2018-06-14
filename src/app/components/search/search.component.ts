@@ -8,8 +8,8 @@ import { SpotifyService } from "../../services/spotify.service";
 export class SearchComponent implements OnInit {
 
   constructor(public _spotify:SpotifyService) { 
-    this._spotify.getArtistas().subscribe(resp=>{
-      console.log(resp);
+    this._spotify.getArtistas().subscribe(artistas=>{
+      console.log(artistas);
     });
   }
 
