@@ -1,27 +1,34 @@
-# Spotiapp
+# SpotiApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+## Instalaciones.
+Lo primero es instalar NodeJs para obtener el npm en la cmd de windows, una vez instalado se puede instalar TypeScript y Angular-Cli por npm.
 
-## Development server
+* [NodeJs](https://nodejs.org/es/)
+* [TypeScript](https://www.typescriptlang.org/)
+* [Angular-Cli](https://cli.angular.io/)
+* [Postman](https://www.getpostman.com/)
+* [Spotify](https://www.spotify.com/cl/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Configuraciones previas.
+Se necesita generar un token para usar la aplicación, ya que solo fue desarrollada para el aprendizaje.
+En `Postman` se debe hacer una petición `POST` a la API de developers de spotify, los campos son los siguientes:
+```shell
+POST https://accounts.spotify.com/api/token
+```
+Elegir `Body`, luego `x-www-form-urlencoded` e ingresar los siguientes campos:
+```shell
+key         value
+grant_type client_credentials
+client_id user
+client_secret clave
+```
+Para obtener el campo `user` y `clave` hay que ir a [SpotifyDeveloper](https://developer.spotify.com/dashboard/applications), crear una aplicación y se obtendrán los dos parametros.
 
-## Code scaffolding
+Una vez obtenido el token, en `app/services/spotify.service.ts` hay un atributo `token` de la clase para ingresar el token.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Tambien para un mejor uso de la aplicación se debe tener spotify instalado en el computador para que no de errores de tipo GET y se pueda escuchar la canción completa y no una demo.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Cuando ya este todo instalado y configurado se puede correr el servidor con:
+```shell
+ng serve
+```
