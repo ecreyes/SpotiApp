@@ -13,7 +13,7 @@ Tambien hay que mencionar que una vez descargado el proyecto hay que hacer un:
 ```shell
 npm install
 ```
-para instalar las dependecias del `package.json` y obtener el node_modules.
+para instalar las dependencias del `package.json` y obtener el node_modules.
 
 ## Configuraciones previas.
 Se necesita generar un token para usar la aplicación, ya que solo fue desarrollada para el aprendizaje.
