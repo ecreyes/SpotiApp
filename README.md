@@ -9,6 +9,12 @@ Lo primero es instalar NodeJs para obtener el npm en la cmd de windows, una vez 
 * [Postman](https://www.getpostman.com/)
 * [Spotify](https://www.spotify.com/cl/)
 
+Tambien hay que mencionar que una vez descargado el proyecto hay que hacer un:
+```shell
+npm install
+```
+para instalar las dependecias del `package.json` y obtener el node_modules.
+
 ## Configuraciones previas.
 Se necesita generar un token para usar la aplicación, ya que solo fue desarrollada para el aprendizaje.
 En `Postman` se debe hacer una petición `POST` a la API de developers de spotify, los campos son los siguientes:
